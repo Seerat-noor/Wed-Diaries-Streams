@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Wedding Budget Planning";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget Hacks | WedDiaries & Streams</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4d0039;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: #800040;
+        }
+
+        .budget-tip {
+            background-color: #fff0f5;
+            border: 1px solid #ffd6e7;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(128, 0, 64, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.2s ease;
+        }
+
+            .budget-tip:hover {
+                transform: translateY(-5px);
+            }
+
+        .pro-tip {
+            background: linear-gradient(to right, #f8cdda, #fbeff5);
+            border-left: 5px solid #800040;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 40px 0;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 6px rgba(128, 0, 64, 0.1);
+        }
+
+        .btn-style {
+            background-color: #800040;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+
+            .btn-style:hover {
+                background-color: #660033;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="section-heading">6 Budget Hacks For Your Wedding 💍</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="budget-tip">
+                    <h5> Go Seasonal with Flowers</h5>
+                    <p>Choose blooms that are in season to cut floral costs without sacrificing style or freshness.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="budget-tip">
+                    <h5> Trim the Guest List</h5>
+                    <p>Less guests = less plates, less seats, less cost. Keep it cozy and budgest friendly and close.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="budget-tip">
+                    <h5>Hire a DJ Over a Band</h5>
+                    <p>Bands are great, but DJs can deliver diverse music at half the price!</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="budget-tip">
+                    <h5>Book Photography Wisely</h5>
+                    <p>Consider half-day packages or new talent with stunning portfolios for lesser pricess.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="budget-tip">
+                    <h5> Shop Off-the-Rack</h5>
+                    <p>Say yes to the dress from outlet or whole or Replica shops. Hidden gems await!</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="budget-tip">
+                    <h5>Skip Favors</h5>
+                    <p>Most guests leave them behind anyway—save that cash for honeymoon treats!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pro-tip">
+            <h4>Pro Tip: Calculate Your Wedding Budget Like a Pro!</h4>
+            <p>
+                Start by setting your <strong>total budget</strong>. Then break it down like this:<br />
+                50% for venue & catering, 15% for photography, 10% for attire, 10% for decor, and the rest for entertainment, invites & emergency funds.<br />
+                Always keep a 5-10% buffer for surprises!
+            </p>
+        </div>
+
+        <div class="text-center mb-5">
+            <a href="@Url.Action("Query", "Setup")" class="btn btn-style">Take the Style Quiz 💕</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

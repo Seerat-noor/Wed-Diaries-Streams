@@ -1,0 +1,122 @@
+﻿@model WWWW.Models.Admin
+
+@{
+    ViewData["Title"] = "Request Status";
+}
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/download (5).jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4d0039;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background-color: #fff0f5;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+            .table th {
+                background-color: #ffb6c1;
+                color: #4d0039;
+                padding: 12px;
+                text-align: left;
+            }
+
+            .table td {
+                padding: 12px;
+                border-bottom: 1px solid #f5c2d7;
+            }
+
+        .alert {
+            background-color: #ffccd5;
+            color: #4d0039;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .btn-back {
+            display: block;
+            width: 200px;
+            margin: 30px auto 0;
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 5px 12px rgba(255, 105, 180, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            .btn-back:hover {
+                background-color: #d63384;
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Request Status</h2>
+
+        @if (Model == null)
+        {
+            <div class="alert">
+                Request not accepted.
+            </div>
+        }
+        else
+        {
+            <table class="table">
+                <tr><th>ID</th><td>@Model.Id</td></tr>
+                <tr><th>Full Name</th><td>@Model.FullName</td></tr>
+                <tr><th>Phone Number</th><td>@Model.PhoneNumber</td></tr>
+                <tr><th>Address</th><td>@Model.Address</td></tr>
+                <tr><th>Event Date</th><td>@Model.EventDate.ToString("yyyy-MM-dd")</td></tr>
+                <tr><th>Number of Guests</th><td>@Model.Guests</td></tr>
+                <tr><th>Budget</th><td>@Model.Budget.ToString("C")</td></tr>
+                <tr><th>Type</th><td>@Model.Type</td></tr>
+                <tr><th>Catering</th><td>@(Model.Catering ? "Yes" : "No")</td></tr>
+                <tr><th>Decoration</th><td>@(Model.Decoration ? "Yes" : "No")</td></tr>
+                <tr><th>Entertainment</th><td>@(Model.Entertainment ? "Yes" : "No")</td></tr>
+            </table>
+            <div class="container">
+                <h2>Congrats @Model.FullName</h2>
+                <p>
+                    Wekcome onboard! .<br />
+                    Hope You'd have wonderful experience with Team WedsDiaries&Streams!
+                </p>
+                <a href="/Admin/StatusReq" class="btn-back">Try Again</a>
+            </div>
+        }
+        <!-- Back Button -->
+        <a class="btn-back" href="/Admin/StatusReq">← Back to Request Form</a>
+        <a class="btn-back" href="/Chat/Index">← CHATwADMIN</a>
+        <a href="@Url.Action("Index", "Chat")">Chat</a>
+    </div>
+</body>

@@ -1,0 +1,95 @@
+﻿@model List<WWWW.Models.Admin>
+
+@{
+    ViewData["Title"] = "Customer List";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4d0039;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d63384;
+            margin-top: 30px;
+        }
+
+        .table {
+            width: 90%;
+            margin: 30px auto;
+            background-color: #fff0f5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+        }
+
+            .table th, .table td {
+                padding: 15px;
+                text-align: center;
+                border: 1px solid #f8c8dc;
+            }
+
+            .table th {
+                background-color: #ffb6c1;
+                color: #4d0039;
+            }
+
+            .table td {
+                background-color: #fffafc;
+            }
+
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #ffe4ec;
+        }
+
+        .table-striped tbody tr:nth-child(even) {
+            background-color: #fff0f5;
+        }
+    </style>
+</head>
+<body>
+    <h2>Accepted Customers</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Event Date</th>
+                <th>Guests</th>
+                <th>Type</th>
+                <th>Catering</th>
+                <th>Decoration</th>
+                <th>Entertainment</th>
+                <th>Budget</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.FullName</td>
+                    <td>@customer.PhoneNumber</td>
+                    <td>@customer.Address</td>
+                    <td>@customer.EventDate.ToShortDateString()</td>
+                    <td>@customer.Guests</td>
+                    <td>@customer.Type</td>
+                    <td>@(customer.Catering ? "Yes" : "No")</td>
+                    <td>@(customer.Decoration ? "Yes" : "No")</td>
+                    <td>@(customer.Entertainment ? "Yes" : "No")</td>
+                    <td>@customer.Budget.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Customization";
+}
+
+<style>
+
+    body {
+        background: url('/images/a39ad16c-a327-457c-bb6c-42a79bc3c001.JPG') no-repeat center center fixed, linear-gradient(135deg, #ffe6f2, #ffccdd);
+        background-size: cover;
+        color: #fff; /* white for contrast */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700; /* all text bold */
+    }
+
+    .container {
+        padding-top: 80px;
+    }
+
+    .spinner-border {
+        color: #ff80ab; /* brighter pink for visibility */
+    }
+
+    .btn-custom {
+        background-color: #ff4081;
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+
+        .btn-custom:hover {
+            background-color: #d81b60;
+        }
+
+    .btn-outline-custom {
+        border: 2px solid #ff4081;
+        color: #ff80ab;
+        font-size: 18px;
+        padding: 12px 30px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+        .btn-outline-custom:hover {
+            background-color: #ff4081;
+            color: white;
+            transform: scale(1.05);
+        }
+
+    .btn-main {
+        background-color: #ff4081;
+        color: white;
+        font-size: 22px;
+        padding: 15px 50px;
+        border-radius: 40px;
+        box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+        transition: 0.3s ease-in-out;
+        font-weight: bold;
+    }
+
+        .btn-main:hover {
+            background-color: #d81b60;
+            box-shadow: 0 6px 15px rgba(255, 64, 129, 0.6);
+            transform: translateY(-2px);
+        }
+
+    .tagline {
+        font-style: italic;
+        color: #ffe0f0;
+        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .guide-text {
+        font-size: 17px;
+        color: #f8bbd0;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+    }
+
+    h2,
+    p {
+        font-weight: bold;
+    }
+</style>
+
+<div class="container text-center">
+    <h2 class="fw-bold">Hey Mate! </h2>
+    <p class="fs-5">We are crafting your fairytale wedding as per preferences...</p>
+    <p class="tagline">Sit back, sip chai and let us handle the sparkle </p>
+
+    <!-- Animation of loading -->
+    <div class="spinner-border my-4" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <!-- Just a lil detail -->
+    <p class="guide-text">
+        Your story is one-of-a-kind, and so should be your celebration. We’re gathering all your ideas, favorite themes,
+        and magical wishes to create a wedding that’s true to *you both*. Peek around and customize the details—your dreamy
+        day is just a few clicks away!
+    </p>
+
+    <!-- cute button trio -->
+    <div class="d-flex flex-column align-items-center gap-3 mb-4">
+        <a href="/Setup/Dashboard" class="btn btn-outline-custom"> TakeMEAhead</a>
+        <a href="/Setup/AboutUs" class="btn btn-outline-custom"> Meet The Team</a>
+        <a href="/Setup/Portfolio" class="btn btn-outline-custom"> Explore Our Legacy</a>
+        <a href="/Setup/Planning" class="btn btn-outline-custom"> Explore Wedding Wisdom</a>
+    </div>
+
+</div>

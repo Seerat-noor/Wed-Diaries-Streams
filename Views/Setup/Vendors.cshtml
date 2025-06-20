@@ -1,0 +1,177 @@
+﻿@{
+    ViewData["Title"] = "Vendors";
+}
+
+<title>@ViewData["Title"] - WedDiaries & Streams</title>
+
+<!-- link because code doesn't work without ref -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<head>
+    <!-- Built-in styles -->
+    <style>
+        /* Background and color  */
+        body {
+            background-color: #fbeff5;
+            color: #800040;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: antiquewhite;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #800040;
+        }
+
+        .nav-link {
+            color: #800040 !important;
+        }
+
+        /* Vendor Section */
+        .vendor-section {
+            padding: 60px 0;
+        }
+
+        .vendor-card {
+            border: 1px solid #e0d4d9;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .vendor-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+        .vendor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vendor-info {
+            padding: 20px;
+        }
+
+            .vendor-info h3 {
+                color: #800040;
+                font-weight: bold;
+            }
+
+            .vendor-info p {
+                font-size: 1rem;
+                color: #800040;
+            }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .food-feature {
+            background-color: #800040;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">WedDiaries & Streams</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="btn btn-light me-2" href="@Url.Action("Planning", "Setup")">Planning & Logistics</a></li>
+                    <li class="nav-item"><a class="btn btn-light me-2" href="@Url.Action("Ideas", "Setup")">Ideas & Inspiration</a></li>
+                    <li class="nav-item"><a class="btn btn-light me-2" href="@Url.Action("Vendors", "Setup")">Vendors</a></li>
+                    <li class="nav-item"><a class="btn btn-light" href="@Url.Action("AboutUs", "Setup")">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Vendor Portfolio Section -->
+    <section class="vendor-section text-center">
+        <div class="container">
+            <h2 class="mb-5" style="color: #800040;">Our Trusted Vendors</h2>
+
+            <div class="row">
+                <!-- vendor1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Desi Flavors</h3>
+                            <p>Serving the best traditional Indian and Pakistani cuisine for your event.</p>
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <div class="food-feature">
+                                <p>Sponsor: Famous Biryani & Samosas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Spice Craze Catering</h3>
+                            <p>Your special day deserves the finest catering with the perfect blend of spices.</p>
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <div class="food-feature">
+                                <p>Sponsor: Delicious Paneer Tikka & Butter Chicken</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- v3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="vendor-card">
+                        <div class="vendor-image">
+                        </div>
+                        <div class="vendor-info">
+                            <h3>Heavenly Desi Bites</h3>
+                            <p>Indulge in the rich taste of traditional sweets and savory dishes.</p>
+                            <div class="rating">
+                                ⭐⭐⭐⭐☆
+                            </div>
+                            <div class="food-feature">
+                                <p>Sponsor: Gulab Jamun & Chicken Karahi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS link added because code won't run without ref -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

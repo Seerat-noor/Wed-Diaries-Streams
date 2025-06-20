@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('/images/download (5).jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            background: rgba(255, 192, 203, 0.8); /* slightly stronger opacity for readability */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .btn-custom {
+            background-color: antiquewhite;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+        }
+
+            .btn-custom:hover {
+                background-color: bisque;
+                color: white;
+                box-shadow: 0 6px 15px rgba(255, 20, 147, 0.6);
+                transform: scale(1.1);
+            }
+
+        .navbar {
+            background: rgba(255, 182, 193, 0.9);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            color: white !important;
+        }
+
+            .nav-link:hover {
+                text-decoration: underline;
+            }
+
+        .long-paragraph {
+            position: absolute;
+            font-size: 1.2rem;
+            color: cadetblue;
+            max-width: 500px;
+            line-height: 1.6;
+            padding: 15px;
+            background-color: rgba(255, 182, 193, 0.85);
+            border-radius: 15px;
+        }
+
+        .top-left {
+            top: 50px;
+            left: 30px;
+            transform: translate(-30%, -10%);
+        }
+
+        .bottom-right {
+            bottom: 50px;
+            right: 30px;
+            transform: translate(30%, 10%);
+        }
+
+        h1, .nav-link, .btn-custom {
+            text-shadow: 1px 1px 2px #00000050; /* adds depth for visibility */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">WedDiaries & Streams</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/Setup/Vendors">Vendors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Setup/Portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Setup/AboutUs">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Setup/ExploreEvents">Explore Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="overlay text-center">
+        <h1 class="text-white display-3 fw-bold"> Welcome Mr & Mrs</h1>
+
+        <!-- Fancy Redirection Buttons -->
+        <div class="d-flex gap-4 mt-4 flex-wrap justify-content-center">
+            <a href="/Setup/Standard" class="btn btn-custom">Standard Deal</a>
+            <a href="/Setup/Luxury" class="btn btn-custom">Luxury Deal</a>
+        </div>
+
+        <!-- Register Now Button -->
+        <div class="mt-4">
+            <a href="/Setup/Register" class="btn btn-custom">Register Now</a>
+        </div>
+    </div>
+
+    <!-- Long Paragraph Block -->
+    <div class="long-paragraph bottom-right">
+        "Choosing the right wedding planner can make all the difference in your big day. At WedDiaries & Streams, we combine creativity, professionalism, and a deep understanding of your needs to create the perfect celebration. Our team is dedicated to ensuring that no detail is overlooked, and that your wedding day is smooth, stress-free, and filled with love. With years of experience and a passion for making dreams come true, we are here to turn your vision into reality."
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

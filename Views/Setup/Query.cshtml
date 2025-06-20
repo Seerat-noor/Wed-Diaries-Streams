@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Wedding Query";
+}
+
+<!-- Styles and bg -->
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: url('/images/94f3590c-bbf6-4558-9ee3-ee964f387496.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #4d0039;
+    }
+
+    .container {
+        background-color: rgba(255, 240, 248, 0.85); /* bit transpaent */
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(128, 0, 64, 0.1);
+        max-width: 700px;
+        margin: auto;
+    }
+
+    h2, h3 {
+        color: #800040;
+        font-weight: bold;
+    }
+
+    label {
+        color: #800040;
+    }
+
+    .btn-primary {
+        background-color: #800040;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #a61755;
+        }
+
+    .form-control::placeholder {
+        color: #c0728e;
+    }
+
+    small {
+        color: #a06580;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Tell Us About Your Wedding Plans </h2>
+    <form>
+        <!-- Queries -->
+        <div class="mb-4">
+            <label class="fw-bold">Have you decided your wedding date?</label><br>
+            <input type="radio" name="date" value="Yes"> Yes
+            <input type="radio" name="date" value="No"> No
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">What theme do you prefer?</label><br>
+            <input type="radio" name="theme" value="Classic"> Classic
+            <input type="radio" name="theme" value="Traditional"> Traditional
+            <input type="radio" name="theme" value="Modern"> Modern
+            <input type="radio" name="theme" value="Glamorous"> Glamorous
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">What do you think you'll need?</label><br>
+            <small class="text-muted">Select all that apply</small><br>
+            <input type="checkbox" name="services" value="Venue"> Venue
+            <input type="checkbox" name="services" value="Food"> Food
+            <input type="checkbox" name="services" value="Photographer"> Photographer
+            <input type="checkbox" name="services" value="Videographer"> Videographer
+            <input type="checkbox" name="services" value="Beauty Services"> Beauty Services
+            <input type="checkbox" name="services" value="DJ"> DJ
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">Estimated number of guests?</label><br>
+            <input type="number" name="guests" class="form-control" placeholder="e.g. 150" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">What kind of vibe are you dreaming of?</label><br>
+            <input type="radio" name="vibe" value="Chill & Intimate"> Chill & Intimate
+            <input type="radio" name="vibe" value="Luxury & Glam"> Luxury & Glam
+            <input type="radio" name="vibe" value="Colorful & Cultural"> Colorful & Cultural
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">What time of day is your dream wedding?</label><br>
+            <input type="radio" name="weddingTime" value="Morning"> Morning
+            <input type="radio" name="weddingTime" value="Afternoon"> Afternoon
+            <input type="radio" name="weddingTime" value="Evening"> Evening
+            <input type="radio" name="weddingTime" value="Night"> Night
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">Do you already have outfits in mind?</label><br>
+            <input type="radio" name="outfits" value="Yes"> Yes
+            <input type="radio" name="outfits" value="No"> No
+            <input type="radio" name="outfits" value="Need Help"> Need Help! 💬
+        </div>
+
+        <div class="mb-4">
+            <label class="fw-bold">Any special requests?</label><br>
+            <small class="text-muted">Select all that you’d love 💕</small><br>
+            <input type="checkbox" name="specials" value="Custom Cake"> Custom Cake
+            <input type="checkbox" name="specials" value="Fireworks"> Fireworks
+            <input type="checkbox" name="specials" value="Live Music"> Live Music
+            <input type="checkbox" name="specials" value="Dhol Entrance"> Dhol Entrance
+            <input type="checkbox" name="specials" value="Fairy Lights"> Fairy Lights
+        </div>
+
+        <a href="/Setup/Customization" class="btn btn-primary w-100">Proceed</a>
+        <h3 class="mt-5">Let's Get Personal </h3>
+        <div class="d-flex flex-column align-items-center">
+            <input type="text" name="userName" placeholder="Your Name"
+                   class="form-control mb-2" style="width: 50%;" required>
+            
+        </div>
+
+        
+
+    </form>
+</div>

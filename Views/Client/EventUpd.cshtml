@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Event Request Submitted";
+}
+
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* pink themes as before */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4d0039;
+        }
+
+        /*main content container */
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #fff0f5;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.2); /*shadow */
+            border-radius: 10px;
+        }
+
+        /* heading style */
+        h2 {
+            color: #d63384; /* heading */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* message para */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /*  btton */
+        .btn-review {
+            display: block;
+            width: 250px;
+            margin: 0 auto;
+            background-color: #ff69b4;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 5px 12px rgba(255, 105, 180, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            /* Hover effect for the button */
+            .btn-review:hover {
+                background-color: #d63384; /* darker pink */
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- heading -->
+        <h2>Your Request Has Been Submitted</h2>
+
+        <!-- message -->
+        <p>
+            Your request has been passed to the admin.<br />
+            Please wait till you receive a call from our agent.<br />
+            Your request will be updated soon.
+        </p>
+        <a class="btn-review" href="/Admin/StatusReq">View Request Status</a>
+
+        <!-- button to navigate to reviews still in process tho -->
+        <a class="btn-review" href="/Cln/ClientReviews">Read What Clients Say</a>
+    </div>
+</body>
+

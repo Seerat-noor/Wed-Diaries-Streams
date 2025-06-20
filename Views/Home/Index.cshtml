@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" style="background-color: #fce4ec; padding: 50px; border-radius: 20px; margin-top: 30px;">
+    <h1 class="display-4" style="color: #e91e63;">Welcome</h1>
+    <p style="color: #ad1457;">
+        Learn about
+        <a href="https://learn.microsoft.com/aspnet/core" style="color: #c2185b; text-decoration: underline;">
+            building Web apps with ASP.NET Core
+        </a>.
+    </p>
+
+    <a href="@Url.Action("Indexx", "Home")"
+       class="btn btn-lg"
+       style="margin-top: 20px; background-color: #ec407a; color: white; border: none; border-radius: 30px; padding: 12px 30px; font-weight: bold; transition: 0.3s;">
+        Go to Home
+    </a>
+</div>

@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Live Chat";
+    var username = ViewBag.Username;
+}
+
+<h2 class="text-center text-pink">💬 Live Chat</h2>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #4d0039;
+    }
+
+    #messagesList {
+        background-color: #ffe6f0;
+        border: 2px solid #ff99cc;
+        border-radius: 10px;
+        color: #4a004a;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .message {
+        margin-bottom: 8px;
+        padding: 8px;
+        border-radius: 6px;
+        background-color: #ffd6e8;
+    }
+
+    #messageInput {
+        border: 1px solid #ffb6c1;
+    }
+
+    #sendButton {
+        background-color: #ff69b4;
+        border-color: #ff69b4;
+        color: white;
+    }
+
+        #sendButton:hover {
+            background-color: #ff1493;
+            border-color: #ff1493;
+        }
+</style>
+
+<div class="container">
+    <div id="messagesList" class="p-3 mb-3" style="height: 300px; overflow-y: auto;"></div>
+
+    <input type="hidden" id="userInput" value="@username" />
+    <input type="text" id="messageInput" class="form-control mb-2" placeholder="Type your message here..." />
+    <button class="btn" id="sendButton">Send</button>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chathub")
+            .build();
+
+        connection.on("ReceiveMessage", function (user, message) {
+            const msgBox = document.getElementById("messagesList");
+            const msg = document.createElement("div");
+            msg.classList.add("message");
+            msg.innerHTML = `<strong>${user}:</strong> ${message}`;
+            msgBox.appendChild(msg);
+            msgBox.scrollTop = msgBox.scrollHeight;
+        });
+
+        connection.start().catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        document.getElementById("sendButton").addEventListener("click", function () {
+            const user = document.getElementById("userInput").value;
+            const message = document.getElementById("messageInput").value;
+            if (message.trim() !== '') {
+                connection.invoke("SendMessage", user, message).catch(function (err) {
+                    return console.error(err.toString());
+                });
+                document.getElementById("messageInput").value = '';
+            }
+        });
+    </script>
+}

@@ -1,0 +1,63 @@
+﻿@page
+<style>
+    body {
+        background-color: #ffe6f0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    input[type="text"] {
+        border: 1px solid #ff99cc;
+        border-radius: 5px;
+        padding: 8px;
+        width: 100%;
+        background-color: #fff0f5;
+    }
+
+    #sendButton,
+    .btn {
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        #sendButton:hover,
+        .btn:hover {
+            background-color: #ff1493;
+        }
+
+    .btn {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="row p-1">
+        <div class="col-1">User</div>
+        <div class="col-5"><input type="text" id="userInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-1">Message</div>
+        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6 text-end">
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <hr />
+        </div>
+    </div>
+    <a class="btn" href="/Home/fun">click</a>
+</div>
+
+<script src="~/lib/microsoft/signalr/signalr.min.js"></script>
+<script src="~/js/chat.js"></script>

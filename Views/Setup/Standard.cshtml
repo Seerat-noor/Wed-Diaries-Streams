@@ -1,0 +1,191 @@
+﻿@{
+    ViewData["Title"] = "Standard View - Wedding Packages";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Standard View - WedDiaries & Streams</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* All the pink */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4d0039;
+        }
+        /* Header */
+        .section-header {
+            background-color: pink;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(245, 0, 87, 0.5);
+        }
+
+        /* Card for Events */
+        .event-card {
+            border: 2px solid #f500;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(245, 0, 87, 0.3);
+            background-color: #fff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            /* Hover Effect on Cards */
+            .event-card:hover {
+                transform: scale(1.05);
+            }
+
+            .event-card img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f50057;
+            padding: 15px;
+        }
+
+        .event-description {
+            padding: 10px 15px;
+            font-size: 1.1rem;
+            color: #880e4f;
+        }
+
+        .event-price {
+            font-size: 1.2rem;
+            color: #d32f2f;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        .event-details {
+            padding: 15px;
+            background-color: #f8bbd0;
+            border-radius: 0 0 15px 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: peachpuff;
+            color: white;
+            margin-top: 50px;
+        }
+
+        /* Prominent Register Now Button */
+        .btn-custom {
+            background-color: #e91e63;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+            .btn-custom:hover {
+                background-color: #c2185b;
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="section-header">
+        <h1 class="display-4">Our Wedding Packages - Standard View</h1>
+        <p class="lead">Experience the beauty of every wedding celebration with our affordable packages, featuring food, services, setup, and decor.</p>
+    </div>
+
+    <!--  Details -->
+    <div class="container">
+        <div class="row">
+            <!-- Henna Night -->
+            <div class="col-md-4">
+                <div class="event-card">
+
+                    <div class="event-info">
+                        <h3 class="event-title">The Henna Night</h3>
+                        <p class="event-description">Celebrate the pre-wedding festivities with our Henna Night package. This includes an elegant setup, delicious finger foods, and a vibrant atmosphere. Perfect for all your henna and traditional celebrations!</p>
+                        <p class="event-price">1K per head - Special Low Rate (discounted)!</p>
+                    </div>
+                    <div class="event-details">
+                        <ul>
+                            <li>Traditional Henna Artists</li>
+                            <li>Light Finger Foods (Samosas, Mini Kebabs, etc.)</li>
+                            <li>Vibrant Decor with Pink & Gold Accents</li>
+                            <li>Music & Dance Setup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Big Day -->
+            <div class="col-md-4">
+                <div class="event-card">
+
+                    <div class="event-info">
+                        <h3 class="event-title">The Big Day</h3>
+                        <p class="event-description">Make your wedding day truly special with our "Big Day" package. Enjoy a stunning setup, mouth-watering food options, and flawless service that will leave you and your guests in awe.</p>
+                        <p class="event-price">1200 per head - Affordable Luxury (discounted)!</p>
+                    </div>
+                    <div class="event-details">
+                        <ul>
+                            <li>Full Wedding Setup & Decor</li>
+                            <li>Buffet-Style Dinner with Multiple Choices</li>
+                            <li>Professional Event Coordination</li>
+                            <li>Floral Arrangements & Elegant Lighting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Reception Event -->
+            <div class="col-md-4">
+                <div class="event-card">
+
+                    <div class="event-info">
+                        <h3 class="event-title">The Reception Event</h3>
+                        <p class="event-description">End your wedding celebration in style with our Reception Event package. From the grand entrance to the farewell, we provide full event management, delicious catering, and sophisticated decor.</p>
+                        <p class="event-price">1500 per head - Best Value (Discounted)!</p>
+                    </div>
+                    <div class="event-details">
+                        <ul>
+                            <li>Reception Hall Setup with Custom Decor</li>
+                            <li>Delicious Full-Course Meal</li>
+                            <li>Live Entertainment & Dance Floor</li>
+                            <li>Elegant Centerpieces & Table Settings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/Setup/Register" class="btn btn-custom">Register Now</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 WedDiaries & Streams | Affordable Wedding Packages For Every Couple</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

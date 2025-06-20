@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Request Not Found";
+}
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('/images/94f3590c-bbf6-4558-9ee3-ee964f387496.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4d0039;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #fff0f5;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #d63384;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        a.btn-back {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+            a.btn-back:hover {
+                background-color: #d63384;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Request Not Found</h2>
+        <p>
+            Your request is still in process or has not been accepted yet.<br />
+            Please try again later or make sure you entered the correct full name and phone number.
+        </p>
+        <a href="/Admin/StatusReq" class="btn-back">Try Again</a>
+    </div>
+</body>

@@ -1,0 +1,145 @@
+﻿<title>WedDiaries & Streams</title>
+
+<!-- link cuz code didnt work without ref -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <!-- builtin styles used below -->
+    <style>
+        /* Bg with my fav themes */
+        body {
+            background: url('/images/download (3).jpg') no-repeat center center fixed;
+            background-color: #fbeff5;
+            color: #800040;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /*Navbar on top of my landing page to make it catchy */
+        .navbar {
+            background-color: blanchedalmond;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #800040;
+        }
+
+        .nav-link {
+            color: #800040 !important;
+        }
+
+        /* Hero Section..on the bg of what youd see upon l */
+        
+        .hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            background-image: linear-gradient(to right, rgba(248, 205, 218, 0.7), rgba(251, 239, 245, 0.7)), url('/images/download (3).jpg'); /* img path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+        }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #800040;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                color: #800040;
+            }
+
+        .start-btn {
+            background-color: #800040;
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: 0.3s;
+            border: none;
+        }
+
+            .start-btn:hover {
+                background-color: #660033;
+            }
+
+        /* Fixed Admin Button */
+        .admin-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #800040;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+            .admin-btn:hover {
+                background-color: #660033;
+            }
+
+        /* Responsive Styles w double at the rate symbol cuz compile erros appeared */
+        @@media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">WedDiaries & Streams</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-light me-2" href="@Url.Action("Planning", "Setup")">Planning & Logistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light me-2" href="@Url.Action("Ideas", "Setup")">Ideas & Inspiration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light me-2" href="@Url.Action("Vendors", "Setup")">Vendors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light" href="@Url.Action("AboutUs", "Setup")">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero or bg ssection -->
+    <section class="hero">
+        <h1>Plan Your Dream Wedding Effortlessly with us.</h1>
+        <p class="mt-3">A guided journey to your perfect day.</p>
+        <a href="@Url.Action("Query", "Setup" )" class="btn start-btn mt-4">Start Planning</a>
+    </section>
+
+    <!-- Admin Portal Button -->
+    <a href="@Url.Action("AdminLogin", "Admin")" class="admin-btn">Admin Portal</a>
+
+    <!-- Bootstrap link added cuz code wont run without ref -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

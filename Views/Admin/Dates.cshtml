@@ -1,0 +1,43 @@
+﻿@model List<DateTime>
+
+@{
+    ViewData["Title"] = "Event Dates";
+}
+
+<h2>Event Dates</h2>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #4d0039;
+    }
+</style>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].ToString("yyyy-MM-dd")</td> <!-- Format as needed -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        No dates available.
+    </div>
+}

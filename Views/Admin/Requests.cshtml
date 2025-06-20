@@ -1,0 +1,67 @@
+﻿@model List<WWWW.Models.Client>
+@{
+    ViewData["Title"] = "Requests";
+}
+
+<h2>Client Requests</h2>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: url('/images/08810817-9bac-4488-8e90-58c8a297dc71.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #4d0039;
+    }
+</style>
+
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Phone (/code)</th>
+                <th>Address</th>
+                <th>Event Date</th>
+                <th>Guests</th>
+                <th>Catering</th>
+                <th>Decoration</th>
+                <th>Entertainment</th>
+                <th>DealType</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].FullName</td>
+                    <td>@Model[i].PhoneNumber</td>
+                    <td>@Model[i].Address</td>
+                    <td>@Model[i].EventDate.ToString("yyyy-MM-dd")</td>
+                    <td>@Model[i].Guests</td>
+                    <td>@Model[i].Catering</td>
+                    <td>@Model[i].Decoration</td>
+                    <td>@Model[i].Entertainment</td>
+                    <td>@Model[i].Type</td>
+                    <td>
+                        <form asp-action="AddCustomer" asp-route-id="@Model[i].Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-success btn-sm">Accept</button>
+                        </form>
+                        <form asp-action="Delete" asp-route-id="@Model[i].Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-warning btn-sm">Delete</button>
+                        </form>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No client requests found.</div>
+}
